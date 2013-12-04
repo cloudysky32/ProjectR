@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <!-- 배                   포                 용 -->
+
+    <com.google.android.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="50dp"
+        android:apiKey="0F33DNMWSpX0sIuYgXLU-hRCBfcD9nMug0Pi4YQ"
+        android:clickable="true" />
+
+    <!-- 디             버           그            용 -->
+    <!--
+    <com.google.android.maps.MapView
+        android:id="@+id/map"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="50dp"
+        android:apiKey="0F33DNMWSpX31Yy7YNmr__1Vu8k_-l5clGhUN8A"
+        android:clickable="true" />
+    -->
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="25dp"
+        android:layout_gravity="top"
+        android:background="@drawable/bg_black_transparent"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp" >
+
+        <TextSwitcher
+            android:id="@+id/txtSwitcher"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+
+    <com.projectr.code.utils.MultiDirectionSlidingDrawer
+        xmlns:mokoz="http://schemas.android.com/apk/res/com.projectr.code"
+        android:id="@+id/friendListDrawer"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_gravity="right"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="25dp"
+        android:animateOnClick="true"
+        mokoz:content="@+id/content"
+        mokoz:direction="rightToLeft"
+        mokoz:handle="@+id/handle" >
+
+        <include
+            android:id="@id/content"
+            layout="@layout/drawer_friendlist" />
+
+        <Button
+            android:id="@id/handle"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent" />
+    </com.projectr.code.utils.MultiDirectionSlidingDrawer>
+
+    <com.projectr.code.utils.MultiDirectionSlidingDrawer
+        xmlns:mokoz="http://schemas.android.com/apk/res/com.projectr.code"
+        android:id="@+id/questTypeDrawer"
+        android:layout_width="50dp"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="25dp"
+        android:animateOnClick="true"
+        mokoz:content="@+id/content"
+        mokoz:direction="leftToRight"
+        mokoz:handle="@+id/handle" >
+
+        <include
+            android:id="@id/content"
+            layout="@layout/drawer_questtype" />
+
+        <Button
+            android:id="@id/handle"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent" />
+    </com.projectr.code.utils.MultiDirectionSlidingDrawer>
+
+    <com.projectr.code.utils.MultiDirectionSlidingDrawer
+        xmlns:mokoz="http://schemas.android.com/apk/res/com.projectr.code"
+        android:id="@+id/notifyListDrawer"
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginTop="27dp"
+        android:animateOnClick="true"
+        mokoz:content="@+id/content"
+        mokoz:direction="topToBottom"
+        mokoz:handle="@+id/handle" >
+
+        <include
+            android:id="@id/content"
+            layout="@layout/drawer_notifylist" />
+
+        <Button
+            android:id="@id/handle"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" />
+    </com.projectr.code.utils.MultiDirectionSlidingDrawer>
+
+    <com.projectr.code.utils.MultiDirectionSlidingDrawer
+        xmlns:mokoz="http://schemas.android.com/apk/res/com.projectr.code"
+        android:id="@+id/clueListDrawer"
+        android:layout_width="fill_parent"
+        android:layout_height="130dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="50dp"
+        android:animateOnClick="true"
+        mokoz:content="@+id/content"
+        mokoz:direction="bottomToTop"
+        mokoz:handle="@+id/handle" >
+
+        <include
+            android:id="@id/content"
+            layout="@layout/drawer_cluelist" />
+
+        <Button
+            android:id="@id/handle"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp" />
+    </com.projectr.code.utils.MultiDirectionSlidingDrawer>
+
+    <RelativeLayout
+        android:id="@+id/menu"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|right"
+        android:layout_marginBottom="60dp"
+        android:layout_marginRight="10dp"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <RelativeLayout
+            android:id="@+id/menuText"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/bg_gradient" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:padding="5dp"
+                android:text="메뉴"
+                android:textColor="#EEEEEE" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/menuText"
+            android:background="@drawable/bg_white_transparent"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/menuLogout"
+                android:layout_width="99.5dp"
+                android:layout_height="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_white"
+                android:text="Logout"
+                android:textColor="#111111" />
+
+            <TextView
+                android:layout_width="1dp"
+                android:layout_height="30dp"
+                android:layout_centerInParent="true"
+                android:background="#AAAAAA" />
+
+            <Button
+                android:id="@+id/menuAbout"
+                android:layout_width="99.5dp"
+                android:layout_height="50dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_white"
+                android:text="About"
+                android:textColor="#111111" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_gravity="bottom"
+        android:background="@drawable/bg_gradient"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <ImageButton
+            android:id="@+id/questTypeButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_rounding"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_questtype" />
+
+        <Button
+            android:id="@+id/clueButton"
+            android:layout_width="60dp"
+            android:layout_height="47dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/btn_gradient"
+            android:text="단서"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/historyButton"
+            android:layout_width="60dp"
+            android:layout_height="47dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/clueButton"
+            android:background="@drawable/btn_gradient"
+            android:text="일지"
+            android:textColor="#FFFFFF" />
+
+        <Button
+            android:id="@+id/rankingButton"
+            android:layout_width="60dp"
+            android:layout_height="47dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/clueButton"
+            android:background="@drawable/btn_gradient"
+            android:text="랭킹"
+            android:textColor="#FFFFFF" />
+
+        <ImageButton
+            android:id="@+id/friendButton"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_rounding"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_menu" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/historyButton"
+            android:background="#314983" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/historyButton"
+            android:background="#314983" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/rankingButton"
+            android:background="#314983" />
+
+        <TextView
+            android:layout_width="1dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@id/rankingButton"
+            android:background="#314983" />
+    </RelativeLayout>
+
+</FrameLayout>

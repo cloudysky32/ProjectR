@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#00FFFFFF"
+    android:orientation="vertical"
+    android:padding="2dp" >
+
+    <Button
+        android:id="@+id/everyQuestButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="2dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/icon_every_quest" />
+    
+    <Button
+        android:id="@+id/mainQuestButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="2dp"
+        android:layout_below="@id/everyQuestButton"
+        android:background="@drawable/icon_main_quest" />
+
+    <Button
+        android:id="@+id/eventQuestButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="2dp"
+        android:layout_below="@id/mainQuestButton"
+        android:background="@drawable/icon_event_quest" />
+
+    <Button
+        android:id="@+id/dailyQuestButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="2dp"
+        android:layout_below="@id/eventQuestButton"
+        android:background="@drawable/icon_daily_quest" />
+
+    <Button
+        android:id="@+id/goCenterButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="2dp"
+        android:layout_above="@+id/mylocButton"
+        android:background="@drawable/icon_gocenter" />
+    
+    <Button
+        android:id="@+id/mylocButton"
+        android:layout_width="45dp"
+        android:layout_height="45dp"
+        android:layout_marginBottom="40dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/icon_myloc" />
+
+</RelativeLayout>
